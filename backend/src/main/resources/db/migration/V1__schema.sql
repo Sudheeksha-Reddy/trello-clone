@@ -1,0 +1,17 @@
+CREATE TABLE boards (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE lists (
+    id BIGSERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    board_id BIGINT REFERENCES boards(id) ON DELETE CASCADE
+);
+
+CREATE TABLE cards (
+    id BIGSERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    list_id BIGINT REFERENCES lists(id) ON DELETE CASCADE
+);

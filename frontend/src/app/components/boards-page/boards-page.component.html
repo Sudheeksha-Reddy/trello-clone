@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 style="color: #172b4d;">Workspace Boards</h2>
+
+    <div *ngIf="errorMsg" style="color: #b00020; margin: 10px 0;">
+        {{ errorMsg }}
+    </div>
+
+    <div
+        style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <input [(ngModel)]="newName" placeholder="Enter board name..." style="width: 300px; margin-right: 10px;">
+        <button class="btn btn-blue" (click)="add()">Create Board</button>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div *ngFor="let b of boards" class="card-box"
+            style="width: 230px; height: 100px; padding: 15px; font-weight: bold; background: #0079bf; color: white;"
+            (click)="open(b.id)">
+            {{b.name}}
+            <button class="btn-del" (click)="$event.stopPropagation(); del(b.id)"
+                style="color: white; font-weight: bold;">X</button>
+        </div>
+    </div>
+</div>

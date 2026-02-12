@@ -1,0 +1,20 @@
+<div class="container">
+    <a href="/">← Back</a>
+    <div style="margin: 20px 0;">
+        <input [(ngModel)]="newListTitle" placeholder="List title...">
+        <button class="btn btn-blue" (click)="addList()">Add List</button>
+    </div>
+    <div style="white-space: nowrap; overflow-x: auto;">
+        <div *ngFor="let l of lists" class="list-box">
+            <div style="font-weight: bold; margin-bottom: 10px;">
+                {{l.title}}
+                <button (click)="delList(l.id)" style="float: right;">X</button>
+            </div>
+            <div *ngFor="let c of cardsMap[l.id]" class="card-box">
+                {{c.title}}
+                <button (click)="delCard(l.id, c.id)" style="float: right; font-size: 8px;">X</button>
+            </div>
+            <input #cInput placeholder="Card name..." (keyup.enter)="addCard(l.id, cInput)">
+        </div>
+    </div>
+</div>
