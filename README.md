@@ -9,3 +9,4 @@
 ## Local Dev (without Docker)
 1. Backend: `cd backend && ./mvnw spring-boot:run`
 2. Frontend: `cd frontend && npm install && npm start`
+Testing CI enforcement
