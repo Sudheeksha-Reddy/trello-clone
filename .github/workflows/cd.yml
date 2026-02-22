@@ -34,8 +34,8 @@ jobs:
           file: ./frontend/Dockerfile
           push: true
           tags: |
-            ghcr.io/Sudheeksha-Reddy/trello-frontend:latest
-            ghcr.io/Sudheeksha-Reddy/trello-frontend:${{ github.sha }}
+            ghcr.io/sudheeksha-reddy/trello-frontend:latest
+            ghcr.io/sudheeksha-reddy/trello-frontend:${{ github.sha }}
 
       # ---------- BACKEND ----------
       - name: Build & push backend image
@@ -45,5 +45,5 @@ jobs:
           file: ./backend/Dockerfile
           push: true
           tags: |
-            ghcr.io/Sudheeksha-Reddy/trello-backend:latest
-            ghcr.io/Sudheeksha-Reddy/trello-backend:${{ github.sha }}
+            ghcr.io/sudheeksha-reddy/trello-backend:latest
+            ghcr.io/sudheeksha-reddy/trello-backend:${{ github.sha }}
