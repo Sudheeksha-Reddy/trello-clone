@@ -20,3 +20,9 @@ backend/build/
 *.log
 .DS_Store
 Thumbs.db
+**/node_modules/
+**/.angular/
+# Node / Angular
+**/node_modules/
+**/.angular/
+**/dist/
