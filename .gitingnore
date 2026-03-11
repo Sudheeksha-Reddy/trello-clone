@@ -1,11 +1,12 @@
 # dependencies
 node_modules/
+**/node_modules/
 
 # frontend builds
 frontend/dist/
 frontend/build/
 
-# backend builds (java)
+# backend builds (java / general)
 backend/target/
 backend/dist/
 backend/build/
@@ -13,16 +14,16 @@ backend/build/
 # env/secrets
 .env
 .env.*
-.env*
 *.env
 
 # misc
 *.log
 .DS_Store
 Thumbs.db
-**/node_modules/
-**/.angular/
-# Node / Angular
-**/node_modules/
+
+# Angular
 **/.angular/
 **/dist/
+
+# Kubernetes (keep in separate repo)
+ /k8s/
