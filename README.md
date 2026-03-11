@@ -13,3 +13,4 @@ Testing CI enforcement
 Testing CI - part - 2 
 tesing ci - part - 3
 testing cd
+testing cd after the creation of acr
